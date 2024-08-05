@@ -1,0 +1,18 @@
+# GET ALL POKEMONS
+
+http://localhost:3001/pokemons
+
+### 
+
+# GET POKEMON BY ID
+http://localhost:3001/pokemons/2
+
+### 
+
+# GET POKEMON WINNER
+http://localhost:3001/pokemons/3/vs/1
+
+### 
+
+# GET POKEMON WINNER LIST
+http://localhost:3001/results

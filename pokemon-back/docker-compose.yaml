@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - pokemons-db:/app/db
+    ports:
+      - "3002:3002"
+    env_file:
+      - .env
+    command: sh -c "node dist/src/main && node dist/src/database/database.service.js"
+
+volumes:
+  pokemons-db:
