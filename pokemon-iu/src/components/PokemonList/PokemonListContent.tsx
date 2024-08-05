@@ -2,7 +2,7 @@ import React from 'react';
 import { CardMedia, Grid, Typography } from '@mui/material';
 import { PokemonInterface } from '../../interfaces/Pokemon';
 import { CustomCard, CustomContainer } from './styles';
-import pokemonSilhouette from '../../assets/pokemonSilhouette.png';
+import pokemonSiluette from '../../assets/pokemonSiluette.png';
 import { usePokemonStore } from '../../store/pokemonsStore';
 
 interface PokemonListContentProps {
@@ -36,7 +36,7 @@ export const PokemonListContent = ({
           >
             <CardMedia
               component="img"
-              image={imageUrl ?? pokemonSilhouette}
+              image={imageUrl ?? pokemonSiluette}
               alt={name}
               title={name}
               sx={{

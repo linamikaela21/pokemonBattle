@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardMedia, Grid, Typography } from '@mui/material';
 import { CustomCard, CustomContainer } from './styles';
-import pokemonSilhouette from '../../assets/pokemonSilhouette.png';
+import pokemonSiluette from '../../assets/pokemonSiluette.png';
 
 export const PokemonListSkeleton = (): JSX.Element => {
   return (
@@ -16,7 +16,7 @@ export const PokemonListSkeleton = (): JSX.Element => {
                 width: 100,
                 objectFit: 'cover',
               }}
-              image={pokemonSilhouette}
+              image={pokemonSiluette}
               alt="loading"
             />
             <Typography

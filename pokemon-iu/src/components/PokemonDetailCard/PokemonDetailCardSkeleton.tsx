@@ -7,7 +7,7 @@ import {
   Skeleton,
   CardMedia,
 } from '@mui/material';
-import pokemonSilhouette from '../../assets/pokemonSilhouette.png';
+import pokemonSiluette from '../../assets/pokemonSiluette.png';
 import { CustomPokemonCard } from './styles';
 
 export const PokemonDetailCardSkeleton = (): JSX.Element => {
@@ -16,7 +16,7 @@ export const PokemonDetailCardSkeleton = (): JSX.Element => {
       <CardMedia
         sx={{ height: 160 }}
         component="img"
-        image={pokemonSilhouette}
+        image={pokemonSiluette}
         alt="loading"
       />
       <CardContent>
