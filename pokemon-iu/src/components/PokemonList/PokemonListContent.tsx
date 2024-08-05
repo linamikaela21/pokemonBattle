@@ -2,7 +2,7 @@ import React from 'react';
 import { CardMedia, Grid, Typography } from '@mui/material';
 import { PokemonInterface } from '../../interfaces/Pokemon';
 import { CustomCard, CustomContainer } from './styles';
-import pokemonSiluette from '../../assets/pokemonSiluette.png';
+import pokemonSiluette from '../../assets/pokemonSiluette.webp';
 import { usePokemonStore } from '../../store/pokemonsStore';
 
 interface PokemonListContentProps {

@@ -17,14 +17,3 @@ export type PokemonType =
   | 'Steel'
   | 'Fairy'
   | 'Dark';
-
-export interface PokemonInterface {
-  id: number;
-  name: string;
-  type: PokemonType;
-  hp: number;
-  attack: number;
-  defense: number;
-  speed: number;
-  imageUrl: string;
-}

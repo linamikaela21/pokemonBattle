@@ -63,3 +63,11 @@ Para ejecutar la aplicación, siga los siguientes pasos:
 npm i
 npm run start
 ```
+
+## Mejoras
+- Podria haber creado un mono repo
+- Dentro del backend podria haber agregado los tipos en el algoritmo.
+- Agregue un archivo `.http` En el cual se pueden testear los endpoints desde el backend sin necesidad de levantar el frontend pero podria haber agregado Swagger tambien.
+- En el frontend podria agregar el manejo de rutas o crear una tab para acceder a una lista/tabla con los resultados para implementar dicha funcionabilidad del backend
+- Se podria agregar un infinitive scroll en caso de que sean mas pokemons para que la carga de ellos sea en funcion de la demanda
+- Se podria agregar un input search para buscar el pokemon por nombre o filtros para hacerlo por tipos, etc

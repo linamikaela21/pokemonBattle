@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardMedia, Grid, Typography } from '@mui/material';
 import { CustomCard, CustomContainer } from './styles';
-import pokemonSiluette from '../../assets/pokemonSiluette.png';
+import pokemonSiluette from '../../assets/pokemonSiluette.webp';
 
 export const PokemonListSkeleton = (): JSX.Element => {
   return (

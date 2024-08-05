@@ -1,4 +1,10 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  NotFoundException,
+  NotImplementedException,
+  Param,
+} from '@nestjs/common';
 import { PokemonService } from './pokemon.service';
 import { Pokemon } from '../database/entities/pokemon.entity';
 import { ResultsService } from '../results/results.service';
@@ -22,15 +28,27 @@ export class PokemonController {
 
   @Get(':id/vs/:ramdomId')
   async fight(@Param('id') id: string, @Param('ramdomId') ramdomId: string) {
-    const selectedPokemon = await this.pokemonService.findOne(id);
-    const ramdomPokemon = await this.pokemonService.findOne(ramdomId);
+    try {
+      const selectedPokemon = await this.pokemonService.findOne(id);
+      const ramdomPokemon = await this.pokemonService.findOne(ramdomId);
 
-    const { winner, looser } = await this.pokemonService.fight(
-      selectedPokemon,
-      ramdomPokemon,
-    );
+      if (!selectedPokemon || !ramdomPokemon) {
+        return new NotFoundException({
+          message: 'Pokemon not found',
+        });
+      }
 
-    await this.resultsService.addBattle(winner.name, looser.name);
-    return winner;
+      const { winner, looser } = await this.pokemonService.fight(
+        selectedPokemon,
+        ramdomPokemon,
+      );
+
+      await this.resultsService.addBattle(winner.name, looser.name);
+      return winner;
+    } catch (error) {
+      return new NotImplementedException({
+        message: error.message,
+      });
+    }
   }
 }

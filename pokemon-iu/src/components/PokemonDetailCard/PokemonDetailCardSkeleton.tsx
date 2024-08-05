@@ -7,7 +7,7 @@ import {
   Skeleton,
   CardMedia,
 } from '@mui/material';
-import pokemonSiluette from '../../assets/pokemonSiluette.png';
+import pokemonSiluette from '../../assets/pokemonSiluette.webp';
 import { CustomPokemonCard } from './styles';
 
 export const PokemonDetailCardSkeleton = (): JSX.Element => {

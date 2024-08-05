@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { BorderLinearProgress, CustomPokemonCard } from './styles';
 import { PokemonInterface } from '../../interfaces/Pokemon';
-import noPokemon from '../../assets/noPokemon.png';
+import noPokemon from '../../assets/noPokemon.webp';
 
 interface PokemonDetailCardProps {
   pokemon?: PokemonInterface;

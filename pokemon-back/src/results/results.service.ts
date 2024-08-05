@@ -21,6 +21,10 @@ export class ResultsService {
   }
 
   async findAll(): Promise<Result[]> {
-    return await this.resultsRepository.find();
+    return await this.resultsRepository.find({
+      order: {
+        date: 'DESC',
+      },
+    });
   }
 }
